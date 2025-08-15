@@ -6,6 +6,11 @@ A Python implementation task for building a chat application using AI API with b
 
 Implement a command-line chat application that communicates with the AI API. You'll need to complete the missing methods in `client.py` and `app.py` following the provided TODO instructions.
 
+## Branches:
+- `main` here is the task with small descriptions of what to do
+- `with-more-details` here is present super detailed instructions of what you need to do
+- `completed` here is completed version of the task, use it if you completely stuck
+
 ## 🎓 Learning Goals
 
 By completing this task, you will learn:

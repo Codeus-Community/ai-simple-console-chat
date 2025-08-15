@@ -31,3 +31,8 @@ async def start(stream: bool, client: AIClient) -> None:
 # Run application:
 #   Use asyncio.run() method to run the application (call `start` method in `run`)
 raise NotImplementedError
+
+
+#TODO:
+# Test that your application works with different clients, additionally try to print in clients full request and
+# response to to check the data that you send and get
