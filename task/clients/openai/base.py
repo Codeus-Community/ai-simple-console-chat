@@ -9,5 +9,5 @@ class BaseOpenAIClient(AIClient, ABC):
         #TODO:
         # Make validation for `api_key` (the same as in parent class)
         # Call to __init__ of super class
-        # The `api_key` should be formatted according to Open AI specification https://platform.openai.com/docs/guides/text
+        # The `api_key` should be formatted according to Open AI specification (Bearer {api key}) https://platform.openai.com/docs/guides/text
         raise NotImplementedError
