@@ -25,24 +25,20 @@ By completing this task, you will learn:
 - Basic understanding of HTTP requests and async/await
 
 ## 🔧 Setup
-1. Move to the directory `ai-chat-completions-api`
-   ```bash
-   cd ./ai-chat-completions-api/
-   ```
-2. **Setup venv: (also can be configured via IDE)**
+1. **Setup venv: (also can be configured via IDE)**
    ```bash
    python -m venv .venv
    ```
-3. **Install dependencies:**
+2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Set your API key:**
+3. **Set your API key:**
     - Set OPENAI_API_KEY as env variable, https://platform.openai.com/settings/organization/api-keys
     - Set ANTHROPIC_API_KEY as env variable, https://console.anthropic.com/settings/keys
 
-5. **Project structure:**
+4. **Project structure:**
    ```
    task/
    ├── models/
