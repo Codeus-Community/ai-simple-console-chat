@@ -7,43 +7,29 @@ from task.models.role import Role
 class AnthropicAIClient(AIClient):
 
     def __init__(self, endpoint: str, model_name: str, api_key: str, system_prompt: str):
-        super().__init__(endpoint, model_name, api_key, system_prompt)
-        self._client = Anthropic(api_key=api_key)
-        self._async_client = AsyncAnthropic(api_key=api_key)
+        #TODO:
+        # Call to __init__ of super class
+        # Add Anthropic and AsyncAnthropic clients https://github.com/anthropics/anthropic-sdk-python (In readme you can find
+        # samples with both of these clients)
+        # Useful links with request/response samples:
+        #   - https://docs.anthropic.com/en/api/overview
+        #   - https://docs.anthropic.com/en/api/messages
+        raise NotImplementedError
 
     def get_completion(self, messages: list[Message], **kwargs) -> Message:
-        response = self._client.messages.create(
-            system=self._system_prompt,
-            max_tokens=1024,
-            model=self._model_name,
-            messages=[msg.to_dict() for msg in messages]
-        )
-
-        content = ""
-        for block in response.content:
-            if block.type == 'text':
-                content += block.text
-
-        print(content)
-        return Message(role=Role.AI, content=content)
+        #TODO:
+        # - Add System prompt
+        # - Call client
+        # - Print response to console
+        # - Return AI message
+        raise NotImplementedError
 
     async def stream_completion(self, messages: list[Message], **kwargs) -> Message:
-        content = []
+        #TODO:
+        # - Add System prompt
+        # - Call client with streaming mode
+        # - Handle stream with chunks
+        # - Print response to console
+        # - Return AI message
+        raise NotImplementedError
 
-        stream = await self._async_client.messages.create(
-            system=self._system_prompt,
-            max_tokens=1024,
-            model=self._model_name,
-            stream=True,
-            messages=[msg.to_dict() for msg in messages]
-        )
-
-        async for chunk in stream:
-            if chunk.type == "content_block_delta":
-                if hasattr(chunk, 'delta') and hasattr(chunk.delta, 'text'):
-                    delta_content = chunk.delta.text
-                    content.append(delta_content)
-                    print(delta_content, end='')
-
-        print()
-        return Message(role=Role.AI, content="".join(content))

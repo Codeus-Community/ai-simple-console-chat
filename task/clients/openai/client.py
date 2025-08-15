@@ -7,41 +7,26 @@ from task.models.role import Role
 class OpenAIClient(BaseOpenAIClient):
 
     def __init__(self, endpoint: str, model_name: str, system_prompt: str, api_key: str):
-        super().__init__(endpoint, model_name, system_prompt, api_key)
-        self._client = OpenAI(api_key=api_key)
-        self._async_client = AsyncOpenAI(api_key=api_key)
+        #TODO:
+        # Call to __init__ of super class
+        # Add OpenAI and AsyncOpenAI clients https://github.com/openai/openai-python (In readme you can find samples
+        # with both of these clients)
+        # Useful link with request/response samples https://platform.openai.com/docs/api-reference/chat
+        raise NotImplementedError
 
     def get_completion(self, messages: list[Message], **kwargs) -> Message:
-        messages_dicts = [
-            {"role": "system", "content": self._system_prompt},
-            *[message.to_dict() for message in messages]
-        ]
-        response = self._client.chat.completions.create(
-            model=self._model_name,
-            messages=messages_dicts
-        )
-        content = response.choices[0].message.content
-        print(content)
-        return Message(role=Role.AI, content=content)
+        #TODO:
+        # - Prepare message history with System prompt
+        # - Call client
+        # - Print response to console
+        # - Return AI message
+        raise NotImplementedError
 
     async def stream_completion(self, messages: list[Message], **kwargs) -> Message:
-        messages_dicts = [
-            {"role": "system", "content": self._system_prompt},
-            *[message.to_dict() for message in messages]
-        ]
-
-        content = []
-
-        stream = await self._async_client.chat.completions.create(
-            model=self._model_name,
-            stream=True,
-            messages=messages_dicts
-        )
-
-        async for chunk in stream:
-            if delta_content := chunk.choices[0].delta.content:
-                content.append(delta_content)
-                print(delta_content, end='')
-
-        print()
-        return Message(role=Role.AI, content="".join(content))
+        #TODO:
+        # - Prepare message history with System prompt
+        # - Call client with streaming mode
+        # - Handle stream with chunks
+        # - Print response to console
+        # - Return AI message
+        raise NotImplementedError
