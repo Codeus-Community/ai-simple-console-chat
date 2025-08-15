@@ -1,4 +1,4 @@
-# AI Simple Console Chat Task
+# AI Chat Completion Task
 
 A Python implementation task for building a chat application using AI API with both synchronous and streaming completions.
 
@@ -33,16 +33,7 @@ By completing this task, you will learn:
    ```bash
    python -m venv .venv
    ```
-3. **Activate venv**
-   Mac/Linux
-   ```bash
-   source venv/bin/activate
-   ```   
-   Windows
-   ```bash
-   venv\Scripts\activate.bat
-   ```
-4. **Install dependencies:**
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
