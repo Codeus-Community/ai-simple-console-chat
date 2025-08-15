@@ -73,17 +73,17 @@ By completing this task, you will learn:
 
 ## 📝 Your Tasks
 
-### 1. Complete [app.py](app.py)
+### 1. Complete [app.py](task/app.py)
 Implement the `start()` function:
 
 - Handle user input and conversation flow
 - Choose between streaming and regular completion
 - Implement clients and test with them with non-streaming and streaming modes
 
-### 2. Complete [OpenAI Client](clients/openai/client.py) and test it
-### 3. Complete [OpenAI Custom Client](clients/openai/custom_client.py) and test it
-### 4. Optional: Complete [Anthropic Client](clients/anthropic/client.py) and test it
-### 5. Optional: Complete [Anthropic Custom Client](clients/anthropic/custom_client.py) and test it
+### 2. Complete [OpenAI Client](task/clients/openai/client.py) and test it
+### 3. Complete [OpenAI Custom Client](task/clients/openai/custom_client.py) and test it
+### 4. Optional: Complete [Anthropic Client](task/clients/anthropic/client.py) and test it
+### 5. Optional: Complete [Anthropic Custom Client](task/clients/anthropic/custom_client.py) and test it
 
 
 ## 🔍 API Reference
