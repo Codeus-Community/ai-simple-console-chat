@@ -1,15 +1,10 @@
-# AI Simple Console Chat Task
+# AI Chat Completion Task
 
 A Python implementation task for building a chat application using AI API with both synchronous and streaming completions.
 
 ## 🎯 Task Overview
 
-Implement a command-line chat application that communicates with the AI API. You'll need to complete the missing methods in `client.py` and `app.py` following the provided TODO instructions.
-
-## Branches:
-- `main` here is the task with small descriptions of what to do
-- `with-more-details` here is present super detailed instructions of what you need to do
-- `completed` here is completed version of the task, use it if you completely stuck
+Implement a command-line chat application that communicates with the AI API. You'll need to complete the missing methods in `clients` folder and `app.py` following the provided TODO instructions.
 
 ## 🎓 Learning Goals
 
@@ -30,33 +25,20 @@ By completing this task, you will learn:
 - Basic understanding of HTTP requests and async/await
 
 ## 🔧 Setup
-1. Move to the directory `ai-chat-completions-api`
-   ```bash
-   cd ./ai-chat-completions-api/
-   ```
-2. **Setup venv: (also can be configured via IDE)**
+1. **Setup venv: (also can be configured via IDE)**
    ```bash
    python -m venv .venv
    ```
-3. **Activate venv**
-   Mac/Linux
-   ```bash
-   source venv/bin/activate
-   ```   
-   Windows
-   ```bash
-   venv\Scripts\activate.bat
-   ```
-4. **Install dependencies:**
+2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Set your API key:**
+3. **Set your API key:**
     - Set OPENAI_API_KEY as env variable, https://platform.openai.com/settings/organization/api-keys
     - Set ANTHROPIC_API_KEY as env variable, https://console.anthropic.com/settings/keys
 
-5. **Project structure:**
+4. **Project structure:**
    ```
    task/
    ├── models/
